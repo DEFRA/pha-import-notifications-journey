@@ -1,4 +1,4 @@
-# CDP Node.js Environment Test Suite Template
+pha-import-notifications-journey
 
 The template to create a service that runs WDIO tests against an environment.
 
