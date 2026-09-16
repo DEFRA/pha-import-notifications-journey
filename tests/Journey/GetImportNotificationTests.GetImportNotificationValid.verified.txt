@@ -1,0 +1,8 @@
+﻿{
+  ReferenceNumber: CHEDA.GB.2024.4792831,
+  ImportNotificationType: CVEDA,
+  Status: SUBMITTED,
+  PartOne: {
+    PointOfEntry: GBTEEP1
+  }
+}

@@ -6,8 +6,8 @@ on:
       - main
 
 permissions:
-  id-token: write
   contents: write
+  id-token: write
   pull-requests: write
 
 env:
@@ -20,7 +20,7 @@ jobs:
     name: Build, version and publish
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      - name: Check out current repository
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: Build the test suite
