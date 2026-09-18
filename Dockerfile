@@ -21,7 +21,13 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 COPY .config .config
 COPY scripts scripts
+COPY tests/Journey/*.verified.txt tests/Journey/
+COPY global.json global.json
 
+ENV HOME=/home/app
+ENV PATH="$PATH:/home/app/.dotnet/tools"
+RUN chown -R app:app /app
+USER app
 RUN dotnet tool restore
 
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
