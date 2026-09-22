@@ -9,8 +9,21 @@ Journey tests for PHA import notifications service.
 ### Dependencies
 
 Install the following:
+
 - [.NET 10 (SDK)](https://dotnet.microsoft.com/)
 - [Docker](https://docs.docker.com/engine/) (optional)
+
+### Environment variables
+
+Set environment variables as follows:
+
+| Environment variable                         | Default value            |
+| -------------------------------------------- | ------------------------ |
+| `PhaImportNotifications__BaseUrl`            | `http://localhost:8080/` |
+| `PhaImportNotifications__CdpDeveloperApiKey` | none                     |
+| `Token__TokenUrl`                            | `http://localhost:8080/` |
+| `Token__ClientId`                            | `LocalDev`               |
+| `Token__ClientSecret`                        | none                     |
 
 ### Services
 
@@ -29,8 +42,10 @@ dotnet build
 Run as follows:
 
 ```bash
-dotnet test
+dotnet test --results-directory reports --report-html --report-html-filename index.html
 ```
+
+The test report is available from the `reports` directory. See [path/to/project/reports/index.html](path/to/project/reports/index.html) in your browser.
 
 ### Docker
 
